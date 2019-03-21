@@ -20,4 +20,4 @@ apt-get install readline-devel
 控制台输入 python3 mctools.py运行程序
 
 将以以下方式调用脚本:
-script.py {'startf':startf(读取到最后一条的文件指针位置),'time':stime(时间),'message':message(信息)}
+'''script.py {'startf':startf(读取到最后一条的文件指针位置),'time':stime(时间),'message':message(信息)}'''
