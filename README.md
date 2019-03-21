@@ -1,6 +1,6 @@
 # mctools
-我的世界服务器管理工具
-主要功能:
+<b>我的世界服务器管理工具<b /><br />
+<pre>主要功能:
 服务器端开关
 定时重启
 服务器端设置
@@ -20,4 +20,4 @@ apt-get install readline-devel
 控制台输入 python3 mctools.py运行程序
 
 将以以下方式调用脚本:
-'''script.py {'startf':startf(读取到最后一条的文件指针位置),'time':stime(时间),'message':message(信息)}'''
+'''script.py {'startf':startf(读取到最后一条的文件指针位置),'time':stime(时间),'message':message(信息)}'''</pre>
