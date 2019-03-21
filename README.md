@@ -19,5 +19,7 @@ apt-get install readline-devel
 把上诉两个文件放入文件夹
 控制台输入 python3 mctools.py运行程序
 
+开启监控程序时如果服务器产生新的信息将
+变量脚本列表并执行
 将以以下方式调用脚本:
 '''script.py {'startf':startf(读取到最后一条的文件指针位置),'time':stime(时间),'message':message(信息)}'''</pre>
