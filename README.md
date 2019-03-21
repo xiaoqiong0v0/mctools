@@ -1,6 +1,6 @@
 # mctools
 <b>我的世界服务器管理工具<b /><br />
-<img src="mctools/show.PNG" /><br />
+<img src="https://github.com/xiaoqiong0v0/mctools/blob/master/show.PNG?raw=true" /><br />
 <pre>主要功能:
 服务器端开关
 定时重启
