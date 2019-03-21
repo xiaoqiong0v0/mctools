@@ -186,6 +186,7 @@ def shutdown():  # 关闭mc服务器
 def restart(auto=False):  # 重启mc服务器
     shmc("stop")
     tw = 0
+    auto and print("[ ! ] 正在关闭服务器端...")
     while True:
         lst = flast()
         if lst == '' or "Shutdown" in lst['message'] or "Saving chunks for level 'world'/minecraft:" in lst['message']:
@@ -195,11 +196,12 @@ def restart(auto=False):  # 重启mc服务器
         if tw > 30:
             print("[ - ] 关闭超时!")
             mexit()
-        print("\b\r[ ",_rchar[tw%4]," ] 正在关闭服务器端...")
+        not auto and print("\b\r[ ",_rchar[tw%4]," ] 正在关闭服务器端...")
     time.sleep(3)
     shmc("java -Xms1024M -Xmx1536M -jar server.jar")
     tw = 0
     print("...")
+    auto and print("[ ! ] 正在启动服务器端...")
     while True:
         lst = flast()
         if "[Server thread/INFO]: Done" in lst['message']:
@@ -210,7 +212,7 @@ def restart(auto=False):  # 重启mc服务器
         if tw > 120:
             print("[ - ] 启动超时!")
             mexit()
-        print("\b\r[ ",_rchar[tw%4]," ] 正在启动服务器端...")
+        not auto and print("\b\r[ ",_rchar[tw%4]," ] 正在启动服务器端...")
     not auto and mainmenu()
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>
 def resetcron(action,onlydel=False):#重置系统任务
