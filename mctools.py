@@ -102,7 +102,7 @@ def chekrunning():  # 检查服务器端是否正常运行，如果配置没错�
                 tw = 0
                 while True:
                     lst = flast()
-                    if "[Server thread/INFO]: Done" in lst['message']:
+                    if lst != '' and "[Server thread/INFO]: Done" in lst['message']:
                         print("[ + ] 启动完成!")
                         break
                     time.sleep(1)
@@ -143,7 +143,7 @@ def start():  # 启动mc服务器
     tw = 0
     while True:
         lst = flast()
-        if "[Server thread/INFO]: Done" in lst['message']:
+        if lst != "" and "[Server thread/INFO]: Done" in lst['message']:
             print("[ + ] 启动完成!")
             break
         time.sleep(1)
@@ -204,7 +204,7 @@ def restart(auto=False):  # 重启mc服务器
     auto and print("[ ! ] 正在启动服务器端...")
     while True:
         lst = flast()
-        if "[Server thread/INFO]: Done" in lst['message']:
+        if lst != '' and "[Server thread/INFO]: Done" in lst['message']:
             print("[ + ] 启动完成!")
             break
         time.sleep(1)
